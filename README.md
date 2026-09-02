@@ -206,6 +206,18 @@ their districts using their exact street address, the district step now points t
 a page they have already opened. That is fewer steps than asking for a ZIP code, and it is
 correct.
 
+## Live site
+
+**https://can-i-vote.github.io/** — GitHub Pages, served from the `main` branch of
+`github.com/can-i-vote/can-i-vote.github.io` (organization `can-i-vote`, owned by
+`eyallowy-stack`). To publish a change: edit, run `python3 build.py --strict`, commit, `git push`.
+Pages rebuilds in under a minute. `.nojekyll` is present so Pages serves the files as-is.
+
+GitHub Pages cannot set custom response headers, so the header-only protections below
+(`frame-ancestors`, `X-Content-Type-Options`, `Referrer-Policy`) are not applied there. The
+site's own `<meta>` CSP and `referrer` tag still apply. If clickjacking protection matters,
+front it with a host that sets headers (Netlify/Cloudflare) or a custom domain via Cloudflare.
+
 ## Deployment note
 
 `frame-ancestors` cannot be set from a `<meta>` tag — browsers ignore it and log an error.
