@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title data-i18n="index.title1">Am I signed up to vote? — Can I Vote?</title>
+<meta name="description" content="Pick your state. Get the official government page that tells you if you are registered to vote, how to sign up, and how to vote by mail. We never ask for your name, birthday, or address." data-i18n-attr="content:index.desc1">
+<link rel="stylesheet" href="styles.css">
+<script src="lang-init.js"></script>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="index.a7">Skip to the main part of this page</a>
+
+<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square">
+    <path d="M14 4h6v6M20 4l-9 9M17 14v5H5V7h5"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square">
+    <path d="M4 13l5.5 5.5L20 6"/>
+  </symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square">
+    <path d="M6 6l12 12M18 6L6 18"/>
+  </symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+        <rect x="2.5" y="2.5" width="26" height="26" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M9 9l13 13M22 9L9 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/>
+      </svg>
+      <span data-i18n="index.span1">Can I Vote?</span>
+    </a>
+    <nav class="site-nav" aria-label="Main" data-i18n-attr="aria-label:index.arialabel1">
+      <a href="about.html" data-i18n="index.a1">How this works</a>
+      <a href="privacy.html" data-i18n="index.a2">Your privacy</a>
+      <a href="accessibility.html" data-i18n="index.a3">Accessibility</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:ui.lang.group">
+      <button type="button" lang="en" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" lang="es" data-lang="es" aria-pressed="false">Español</button>
+      <button type="button" lang="he" data-lang="he" aria-pressed="false">עברית</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="intro wrap">
+    <h1 data-i18n="index.h11">Am I signed up to vote?</h1>
+    <p class="lead" data-i18n="index.p1">Pick your state. We send you to the one official page that knows the answer.</p>
+    <ul class="trust">
+      <li><span class="box box--sm box--check" aria-hidden="true"></span><span data-i18n="index.span2">We never ask your name.</span></li>
+      <li><span class="box box--sm box--check" aria-hidden="true"></span><span data-i18n="index.span3">We never ask your birthday.</span></li>
+      <li><span class="box box--sm box--check" aria-hidden="true"></span><span data-i18n="index.span4">We never ask your address.</span></li>
+    </ul>
+    <div class="notice">
+      <p data-i18n="index.p2"><strong>This is not a government website.</strong> We do not have any voter records. We just show you which official government page to use, and explain it in plain words.</p>
+      <p data-i18n="index.p3">We are not connected to any political party. <a href="about.html" data-i18n="index.a4">Read how this works</a>.</p>
+    </div>
+  </section>
+
+  <section class="picker wrap" aria-labelledby="step1">
+    <div class="step-head">
+      <span class="box box--accent" aria-hidden="true">1</span>
+      <h2 id="step1" data-i18n="index.h21">Pick your state</h2>
+    </div>
+    <p data-i18n="index.p4">Use the state where you last lived. If you have moved, pick the state you live in <em>now</em>.</p>
+
+    <div class="picker-summary" id="picker-summary" hidden>
+      <p><span data-i18n="ui.picker.your">Your state:</span> <strong id="picker-summary-name"></strong></p>
+      <button type="button" class="btn btn--plain btn--sm" id="change-state" data-i18n="ui.picker.change">Change state</button>
+    </div>
+
+    <div id="picker-body">
+    <div class="filter-row">
+      <label for="state-filter" data-i18n="index.label1">Type your state name to find it faster</label>
+      <input type="text" id="state-filter" autocomplete="off" spellcheck="false" placeholder="For example: Ohio" data-i18n-attr="placeholder:index.placeholder1">
+    </div>
+
+    <ul class="state-grid" id="state-grid">
+      <li><button type="button" data-abbr="AL" aria-pressed="false"><span class="abbr" aria-hidden="true">AL</span><span>Alabama</span></button></li>
+      <li><button type="button" data-abbr="AK" aria-pressed="false"><span class="abbr" aria-hidden="true">AK</span><span>Alaska</span></button></li>
+      <li><button type="button" data-abbr="AZ" aria-pressed="false"><span class="abbr" aria-hidden="true">AZ</span><span>Arizona</span></button></li>
+      <li><button type="button" data-abbr="AR" aria-pressed="false"><span class="abbr" aria-hidden="true">AR</span><span>Arkansas</span></button></li>
+      <li><button type="button" data-abbr="CA" aria-pressed="false"><span class="abbr" aria-hidden="true">CA</span><span>California</span></button></li>
+      <li><button type="button" data-abbr="CO" aria-pressed="false"><span class="abbr" aria-hidden="true">CO</span><span>Colorado</span></button></li>
+      <li><button type="button" data-abbr="CT" aria-pressed="false"><span class="abbr" aria-hidden="true">CT</span><span>Connecticut</span></button></li>
+      <li><button type="button" data-abbr="DE" aria-pressed="false"><span class="abbr" aria-hidden="true">DE</span><span>Delaware</span></button></li>
+      <li><button type="button" data-abbr="DC" aria-pressed="false"><span class="abbr" aria-hidden="true">DC</span><span>District of Columbia</span></button></li>
+      <li><button type="button" data-abbr="FL" aria-pressed="false"><span class="abbr" aria-hidden="true">FL</span><span>Florida</span></button></li>
+      <li><button type="button" data-abbr="GA" aria-pressed="false"><span class="abbr" aria-hidden="true">GA</span><span>Georgia</span></button></li>
+      <li><button type="button" data-abbr="HI" aria-pressed="false"><span class="abbr" aria-hidden="true">HI</span><span>Hawaii</span></button></li>
+      <li><button type="button" data-abbr="ID" aria-pressed="false"><span class="abbr" aria-hidden="true">ID</span><span>Idaho</span></button></li>
+      <li><button type="button" data-abbr="IL" aria-pressed="false"><span class="abbr" aria-hidden="true">IL</span><span>Illinois</span></button></li>
+      <li><button type="button" data-abbr="IN" aria-pressed="false"><span class="abbr" aria-hidden="true">IN</span><span>Indiana</span></button></li>
+      <li><button type="button" data-abbr="IA" aria-pressed="false"><span class="abbr" aria-hidden="true">IA</span><span>Iowa</span></button></li>
+      <li><button type="button" data-abbr="KS" aria-pressed="false"><span class="abbr" aria-hidden="true">KS</span><span>Kansas</span></button></li>
+      <li><button type="button" data-abbr="KY" aria-pressed="false"><span class="abbr" aria-hidden="true">KY</span><span>Kentucky</span></button></li>
+      <li><button type="button" data-abbr="LA" aria-pressed="false"><span class="abbr" aria-hidden="true">LA</span><span>Louisiana</span></button></li>
+      <li><button type="button" data-abbr="ME" aria-pressed="false"><span class="abbr" aria-hidden="true">ME</span><span>Maine</span></button></li>
+      <li><button type="button" data-abbr="MD" aria-pressed="false"><span class="abbr" aria-hidden="true">MD</span><span>Maryland</span></button></li>
+      <li><button type="button" data-abbr="MA" aria-pressed="false"><span class="abbr" aria-hidden="true">MA</span><span>Massachusetts</span></button></li>
+      <li><button type="button" data-abbr="MI" aria-pressed="false"><span class="abbr" aria-hidden="true">MI</span><span>Michigan</span></button></li>
+      <li><button type="button" data-abbr="MN" aria-pressed="false"><span class="abbr" aria-hidden="true">MN</span><span>Minnesota</span></button></li>
+      <li><button type="button" data-abbr="MS" aria-pressed="false"><span class="abbr" aria-hidden="true">MS</span><span>Mississippi</span></button></li>
+      <li><button type="button" data-abbr="MO" aria-pressed="false"><span class="abbr" aria-hidden="true">MO</span><span>Missouri</span></button></li>
+      <li><button type="button" data-abbr="MT" aria-pressed="false"><span class="abbr" aria-hidden="true">MT</span><span>Montana</span></button></li>
+      <li><button type="button" data-abbr="NE" aria-pressed="false"><span class="abbr" aria-hidden="true">NE</span><span>Nebraska</span></button></li>
+      <li><button type="button" data-abbr="NV" aria-pressed="false"><span class="abbr" aria-hidden="true">NV</span><span>Nevada</span></button></li>
+      <li><button type="button" data-abbr="NH" aria-pressed="false"><span class="abbr" aria-hidden="true">NH</span><span>New Hampshire</span></button></li>
+      <li><button type="button" data-abbr="NJ" aria-pressed="false"><span class="abbr" aria-hidden="true">NJ</span><span>New Jersey</span></button></li>
+      <li><button type="button" data-abbr="NM" aria-pressed="false"><span class="abbr" aria-hidden="true">NM</span><span>New Mexico</span></button></li>
+      <li><button type="button" data-abbr="NY" aria-pressed="false"><span class="abbr" aria-hidden="true">NY</span><span>New York</span></button></li>
+      <li><button type="button" data-abbr="NC" aria-pressed="false"><span class="abbr" aria-hidden="true">NC</span><span>North Carolina</span></button></li>
+      <li><button type="button" data-abbr="ND" aria-pressed="false"><span class="abbr" aria-hidden="true">ND</span><span>North Dakota</span></button></li>
+      <li><button type="button" data-abbr="OH" aria-pressed="false"><span class="abbr" aria-hidden="true">OH</span><span>Ohio</span></button></li>
+      <li><button type="button" data-abbr="OK" aria-pressed="false"><span class="abbr" aria-hidden="true">OK</span><span>Oklahoma</span></button></li>
+      <li><button type="button" data-abbr="OR" aria-pressed="false"><span class="abbr" aria-hidden="true">OR</span><span>Oregon</span></button></li>
+      <li><button type="button" data-abbr="PA" aria-pressed="false"><span class="abbr" aria-hidden="true">PA</span><span>Pennsylvania</span></button></li>
+      <li><button type="button" data-abbr="RI" aria-pressed="false"><span class="abbr" aria-hidden="true">RI</span><span>Rhode Island</span></button></li>
+      <li><button type="button" data-abbr="SC" aria-pressed="false"><span class="abbr" aria-hidden="true">SC</span><span>South Carolina</span></button></li>
+      <li><button type="button" data-abbr="SD" aria-pressed="false"><span class="abbr" aria-hidden="true">SD</span><span>South Dakota</span></button></li>
+      <li><button type="button" data-abbr="TN" aria-pressed="false"><span class="abbr" aria-hidden="true">TN</span><span>Tennessee</span></button></li>
+      <li><button type="button" data-abbr="TX" aria-pressed="false"><span class="abbr" aria-hidden="true">TX</span><span>Texas</span></button></li>
+      <li><button type="button" data-abbr="UT" aria-pressed="false"><span class="abbr" aria-hidden="true">UT</span><span>Utah</span></button></li>
+      <li><button type="button" data-abbr="VT" aria-pressed="false"><span class="abbr" aria-hidden="true">VT</span><span>Vermont</span></button></li>
+      <li><button type="button" data-abbr="VA" aria-pressed="false"><span class="abbr" aria-hidden="true">VA</span><span>Virginia</span></button></li>
+      <li><button type="button" data-abbr="WA" aria-pressed="false"><span class="abbr" aria-hidden="true">WA</span><span>Washington</span></button></li>
+      <li><button type="button" data-abbr="WV" aria-pressed="false"><span class="abbr" aria-hidden="true">WV</span><span>West Virginia</span></button></li>
+      <li><button type="button" data-abbr="WI" aria-pressed="false"><span class="abbr" aria-hidden="true">WI</span><span>Wisconsin</span></button></li>
+      <li><button type="button" data-abbr="WY" aria-pressed="false"><span class="abbr" aria-hidden="true">WY</span><span>Wyoming</span></button></li>
+    </ul>
+    <p class="no-match" id="no-match" hidden data-i18n="index.p5">No state matches that. Check the spelling, or clear the box to see all 51.</p>
+    <p class="sr-only" role="status" id="filter-status"></p>
+    </div>
+
+    <noscript>
+      <div class="notice notice--spaced">
+        <p><strong>This page needs JavaScript to show your state's links.</strong> JavaScript is turned off in your browser.</p>
+        <p lang="es"><strong>Esta página necesita JavaScript para mostrar los enlaces de su estado.</strong> JavaScript está desactivado en su navegador. <a href="https://vote.gov/es/" target="_blank" rel="noopener noreferrer">vote.gov en español</a></p>
+        <p lang="he" dir="rtl"><strong>דף זה זקוק ל‑JavaScript כדי להציג את הקישורים של המדינה שלך.</strong> JavaScript כבוי בדפדפן שלך. <a href="https://www.nass.org/can-I-vote" target="_blank" rel="noopener noreferrer">CanIVote.org</a></p>
+        <p>You can still get everything you need straight from the state election officials:
+          <a href="https://www.nass.org/can-I-vote/voter-registration-status" target="_blank" rel="noopener noreferrer">Check if you are signed up<span class="sr-only"> (opens in a new tab)</span></a>,
+          <a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">sign up to vote at vote.gov<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+      </div>
+    </noscript>
+  </section>
+
+  <section class="result result-band wrap" id="result" hidden aria-labelledby="result-title" tabindex="-1">
+    <!-- built by script.js -->
+  </section>
+
+  <section class="why" aria-labelledby="why-h">
+    <div class="wrap">
+      <h2 id="why-h" data-i18n="index.h22">Why we never ask for your name</h2>
+      <p data-i18n="index.p6">There is no single list of every voter in America. Each state keeps its own list. No app, no website, and no AI can look you up across the whole country.</p>
+      <p class="pull" data-i18n="index.p7">If a website says an AI checked your voter record, it is guessing.</p>
+      <p data-i18n="index.p8">A guess is dangerous here. If a website tells you "you are signed up" and it is wrong, you might skip signing up. Then you show up on election day and get turned away. That is a real thing that happens to people.</p>
+      <p data-i18n="index.p9">So we do not guess. Your state has the real list, and your state's website will tell you the truth for free, in about two minutes.</p>
+      <h3 data-i18n="index.h31">Why can’t I just type it in here, and you do the search?</h3>
+      <p data-i18n="index.p10">It is a fair question, and it is the first thing most people ask. There are three reasons, and they are all in your favour.</p>
+      <p data-i18n="index.p11"><strong>One: your browser will not allow it.</strong> No website is permitted to type into another website’s form. That rule is built into every browser on earth, and it is the single thing that stops fake sites from harvesting what you type on real ones. It is protecting you right now.</p>
+      <p data-i18n="index.p12"><strong>Two: it would mean holding your details.</strong> To get around that rule we would have to take your name and birthday onto our own computer and pretend to be you on 51 different state websites. We would then be holding exactly the information we promised never to hold — and storing it would make this site worth attacking.</p>
+      <p data-i18n="index.p13"><strong>Three: the states block it on purpose.</strong> State election sites are built to refuse automated visits, precisely so nobody can bulk-query voter records. When we tested every state link on this site, around twenty of them turned away an automated request. They open perfectly in a normal browser.</p>
+      <p data-i18n="index.p14">So the fastest safe route really is the one in step 2: we tell you exactly what to have ready, then one click takes you straight to the right page. That is about two minutes, and nobody but your own state ever sees your details.</p>
+      <h3 data-i18n="index.h32">We also do not want your information</h3>
+      <p data-i18n="index.p15">Your name, your birthday, and your address together are exactly what a thief needs to open a credit card in your name. Any website that collects all three becomes a target.</p>
+      <p data-i18n="index.p16">So this site collects nothing. No forms. No accounts. No cookies. No tracking. No ads. Nothing about your visit is sent anywhere.</p>
+      <p data-i18n="index.p17">The page does save one thing, on your own device, so you do not have to start again next time: the state you picked. It never leaves your browser, and there is a button to wipe it. <a href="privacy.html" data-i18n="index.a5">See exactly what is stored</a>.</p>
+      <p data-i18n="index.p18">Your state's website <em>will</em> ask for your name and birthday. That is normal and safe — it is the government's own system, and it needs that to find your record.</p>
+    </div>
+  </section>
+
+  <section class="sources wrap" aria-labelledby="src-h">
+    <h2 id="src-h" data-i18n="index.h23">Where this information comes from</h2>
+    <p data-i18n="index.p19">Every link on this site points to a system run by a state election office. We did not write any of the voter rules ourselves.</p>
+    <p data-i18n="index.p20">A few states run their official systems on addresses that do not end in ".gov" — Arizona, Arkansas, Kansas and Washington DC among them. Those are still the real systems. <a href="about.html" data-i18n="index.a6">Here is why</a>.</p>
+    <ul>
+      <li data-i18n="index.li1">State lookup, sign-up, mail ballot, polling place and ID links come from <a href="https://www.nass.org/can-I-vote" target="_blank" rel="noopener noreferrer">CanIVote.org<span class="sr-only"> (opens in a new tab)</span></a>, run by the National Association of Secretaries of State. <span class="date">Collected 1 September 2026.</span></li>
+      <li data-i18n="index.li2">Which states let you vote by mail without a reason comes from the <a href="https://www.ncsl.org/elections-and-campaigns/table-1-states-with-no-excuse-absentee-voting" target="_blank" rel="noopener noreferrer">National Conference of State Legislatures<span class="sr-only"> (opens in a new tab)</span></a>. <span class="date">Their table was last updated 17 July 2026.</span></li>
+      <li data-i18n="index.li3">The U.S. House district finder is <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener noreferrer">house.gov<span class="sr-only"> (opens in a new tab)</span></a>.</li>
+    </ul>
+    <p data-i18n="index.p21"><strong>Voting rules change.</strong> If what you read here does not match your state's official page, believe your state's page, not us.</p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <h2 data-i18n="index.h24">Important</h2>
+    <p data-i18n="index.p22"><strong>This is not a government website</strong> and it is not run by any election office. It is not connected to any political party, candidate, or campaign. It is not legal advice.</p>
+    <p data-i18n="index.p23">We cannot tell you whether you are registered. Only your state can. Everything here is a plain-language guide to official government pages.</p>
+    <ul class="foot-links">
+      <li data-i18n="index.li4"><a href="about.html" data-i18n="index.a1">How this works</a></li>
+      <li data-i18n="index.li5"><a href="privacy.html" data-i18n="index.a2">Your privacy</a></li>
+      <li data-i18n="index.li6"><a href="accessibility.html" data-i18n="index.a3">Accessibility</a></li>
+      <li data-i18n="index.li7"><a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">vote.gov<span class="sr-only"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="states.js"></script>
+<script src="strings.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title data-i18n="a11y.title1">Accessibility — Can I Vote?</title>
+<meta name="description" content="How this site is built to be usable by everyone, what has been tested, and how to report a problem." data-i18n-attr="content:a11y.desc1">
+<link rel="stylesheet" href="styles.css">
+<script src="lang-init.js"></script>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="index.a7">Skip to the main part of this page</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+        <rect x="2.5" y="2.5" width="26" height="26" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M9 9l13 13M22 9L9 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/>
+      </svg>
+      <span data-i18n="index.span1">Can I Vote?</span>
+    </a>
+    <nav class="site-nav" aria-label="Main" data-i18n-attr="aria-label:index.arialabel1">
+      <a href="about.html" data-i18n="index.a1">How this works</a>
+      <a href="privacy.html" data-i18n="index.a2">Your privacy</a>
+      <a href="accessibility.html" data-i18n="index.a3">Accessibility</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:ui.lang.group">
+      <button type="button" lang="en" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" lang="es" data-lang="es" aria-pressed="false">Español</button>
+      <button type="button" lang="he" data-lang="he" aria-pressed="false">עברית</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<article class="prose wrap">
+<h1 data-i18n="index.a3">Accessibility</h1>
+<p class="lead" data-i18n="a11y.p1">Voting information has to work for everyone. This site is built and tested against WCAG 2.2 Level AA, the standard most commonly used to judge whether a website is accessible.</p>
+
+<h2 data-i18n="a11y.h21">What we have done</h2>
+<ul>
+  <li data-i18n="a11y.li1"><strong>Plain language.</strong> Short sentences and everyday words. We write "signed up to vote" instead of "registered", and explain jargon like "absentee ballot" the first time it appears.</li>
+  <li data-i18n="a11y.li2"><strong>Large text.</strong> The body text is 18 pixels, larger than the usual minimum, with generous line spacing.</li>
+  <li data-i18n="a11y.li3"><strong>Strong contrast.</strong> All text meets or exceeds the 4.5:1 contrast requirement, in both light and dark mode.</li>
+  <li data-i18n="a11y.li4"><strong>Full keyboard use.</strong> Everything works without a mouse. The focus outline is thick and always visible, and the tab order follows the visual order.</li>
+  <li data-i18n="a11y.li5"><strong>Large targets.</strong> Every button and link is at least 44 by 44 pixels.</li>
+  <li data-i18n="a11y.li6"><strong>Screen reader support.</strong> Proper headings, landmarks, and labels. Links that open a new tab say so out loud. Choosing a state or an answer moves focus to the new content and announces it.</li>
+  <li data-i18n="a11y.li7"><strong>Never colour alone.</strong> The "yes" and "no" choices use words and icons as well as colour.</li>
+  <li data-i18n="a11y.li8"><strong>Reduced motion.</strong> If your device is set to reduce motion, all movement and smooth scrolling is switched off.</li>
+  <li data-i18n="a11y.li9"><strong>Works small and zoomed.</strong> Usable down to a 320 pixel wide screen and at 200% zoom, with no sideways scrolling and nothing cut off.</li>
+  <li data-i18n="a11y.li10"><strong>Dark mode.</strong> Follows your device setting, with contrast checked in both.</li>
+  <li data-i18n="a11y.li11"><strong>No time limits</strong>, no flashing, no autoplay, and no pop-ups.</li>
+</ul>
+
+<h2 data-i18n="a11y.h22">What has been tested</h2>
+<ul>
+  <li data-i18n="a11y.li12">Automated testing with axe-core against the WCAG 2.0 A, 2.0 AA and 2.2 AA rule sets, with zero violations reported.</li>
+  <li data-i18n="a11y.li13">Manual keyboard testing of the whole page, start to finish.</li>
+  <li data-i18n="a11y.li14">Layout checked at 320, 375, 768, 1024 and 1512 pixels wide, and at 200% zoom.</li>
+  <li data-i18n="a11y.li15">Contrast checked in both light and dark mode.</li>
+</ul>
+
+<h2 data-i18n="a11y.h23">What has not been tested</h2>
+<p data-i18n="a11y.p2">We want to be straight with you about the limits.</p>
+<ul>
+  <li data-i18n="a11y.li16">Automated tools catch only a portion of accessibility problems — commonly estimated at around a third. They cannot judge whether wording is clear or whether a page makes sense.</li>
+  <li data-i18n="a11y.li17">This site has <strong>not</strong> been tested with a real screen reader such as VoiceOver, NVDA or JAWS.</li>
+  <li data-i18n="a11y.li18">It has <strong>not</strong> been tested by people with disabilities, which is the only test that really counts.</li>
+</ul>
+<p data-i18n="a11y.p3">Meeting WCAG 2.2 AA is the goal and the measure used here. It is not a legal guarantee.</p>
+
+<h2 data-i18n="a11y.h24">If something does not work for you</h2>
+<p data-i18n="a11y.p4">Tell whoever runs this site and it will be fixed. An accessibility problem on a voting page is a serious bug, not a nice-to-have.</p>
+<p data-i18n="a11y.p5">If you need help voting right now and this site is in your way, do not wait for us. Your local election office is required to help you, and can do so by phone. You can find their contact details through <a href="https://www.nass.org/can-I-vote" target="_blank" rel="noopener noreferrer">CanIVote.org<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+
+<h2 data-i18n="a11y.h25">Your rights</h2>
+<p data-i18n="a11y.p6">Federal law protects your right to vote with a disability. That includes an accessible voting machine at your polling place, and the right to bring someone of your choice to help you vote. <a href="https://vote.gov/voting-with-disability" target="_blank" rel="noopener noreferrer">vote.gov explains these rights<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+
+<p data-i18n="privacy.p17"><em>Last updated 1 September 2026.</em></p>
+</article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <h2 data-i18n="index.h24">Important</h2>
+    <p data-i18n="index.p22"><strong>This is not a government website</strong> and it is not run by any election office. It is not connected to any political party, candidate, or campaign. It is not legal advice.</p>
+    <p data-i18n="index.p23">We cannot tell you whether you are registered. Only your state can. Everything here is a plain-language guide to official government pages.</p>
+    <ul class="foot-links">
+      <li data-i18n="about.li21"><a href="index.html" data-i18n="about.a1">Start here</a></li>
+      <li data-i18n="index.li4"><a href="about.html" data-i18n="index.a1">How this works</a></li>
+      <li data-i18n="index.li5"><a href="privacy.html" data-i18n="index.a2">Your privacy</a></li>
+      <li data-i18n="index.li6"><a href="accessibility.html" data-i18n="index.a3">Accessibility</a></li>
+      <li data-i18n="index.li7"><a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">vote.gov<span class="sr-only"> (opens in a new tab)</span></a></li>
+    </ul>
+  </div>
+</footer>
+<script src="states.js"></script>
+<script src="strings.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>
