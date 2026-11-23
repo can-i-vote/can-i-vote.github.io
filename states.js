@@ -126,10 +126,10 @@ const STATES = [
   "name": "Idaho",
   "abbr": "ID",
   "mail": "no_excuse",
-  "status": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/VoterSearch.aspx",
-  "register": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ApplicationInstructions.aspx",
+  "status": "https://votertools.voteidaho.gov/TEDElectionLink/VoterServices/voter-search/ovr-voter-search?returnUrl=VoterServices%2Fvoter%2Fvoter-profile",
+  "register": "https://voteidaho.gov/voter-registration/",
   "absentee": "https://voteidaho.gov/casting-your-ballot/#vote-early",
-  "polling": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ViewPollingLocation.aspx",
+  "polling": "https://votertools.voteidaho.gov/TEDElectionLink/VoterServices/voter/where-do-I-vote",
   "id": "https://voteidaho.gov/identification-requirements/"
  },
  {
@@ -148,9 +148,9 @@ const STATES = [
   "mail": "excuse",
   "status": "https://indianavoters.in.gov/",
   "register": "https://indianavoters.in.gov/PublicSite/PublicMain.aspx",
-  "absentee": "https://www.in.gov/sos/elections/2402.htm",
+  "absentee": "https://www.in.gov/sos/elections/voter-information/ways-to-vote/absentee-voting",
   "polling": "https://indianavoters.in.gov/PublicSite/PublicMain.aspx",
-  "id": "https://www.in.gov/sos/elections/2401.htm"
+  "id": "https://www.in.gov/sos/elections/voter-information/photo-id-law"
  },
  {
   "name": "Iowa",

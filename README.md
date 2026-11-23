@@ -68,6 +68,12 @@ NASS's own list was not clean. These were found by health-checking all 255 links
   longer resolves over TLS. Repointed to the live `elections.maryland.gov` equivalents.
 - **Iowa** (mail ballot, voter ID) returned real `404`s — the state restructured its site.
   Repointed to `sos.iowa.gov/voters/absentee-voting` and `.../voters/voter-id-faq`.
+- **Idaho** (status, registration, polling place), found on the 2026-11-23 re-check: the old
+  `elections.sos.idaho.gov` host no longer resolves. Repointed to `voteidaho.gov` and
+  `votertools.voteidaho.gov`.
+- **Indiana** (mail ballot, voter ID), same re-check: real `404`s after a site restructure.
+  Repointed to `in.gov/sos/elections/voter-information/ways-to-vote/absentee-voting` and
+  `.../voter-information/photo-id-law`.
 
 All 255 links are now HTTPS and resolve. The remaining `403`s in an automated sweep are
 WAF bot-blocks; spot-checked in a real browser (Ohio, Wisconsin) and they load fine.
@@ -80,7 +86,17 @@ election:
 
 ```bash
 # re-scrape NASS and diff against states.js before each election cycle
+
+# check every link in states.js and write LINK-CHECK-<date>.md (changes nothing)
+python3 tools/check_links.py
+
+# after fixing a link in states.js, rebuild the single-file copy
+python3 build.py
 ```
+
+Last run: 2026-11-23 (0 broken after the Idaho and Indiana fixes above). Massachusetts and
+New Mexico answer a script with a redirect loop or a `403` because they want cookies; open
+those in a real browser.
 
 If nobody owns this, the site will eventually send people to dead pages — the exact harm it
 exists to prevent. See the "Highest-risk item" section of `COMPLIANCE.md`.
